@@ -1,0 +1,88 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.gameContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#gameBoard{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    border: 3px solid;
+}   
+.specifics{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    min-width: 100%;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+.null{
+    background-color: white;
+}
+.snake{
+    background-color: greenyellow;
+}
+.apple{
+    background-color: red;
+}
+.controls{
+    min-width: 100%;
+    display: none;
+    justify-content: space-between;
+}
+.cButton{
+    background:none;
+    min-width: 24%;
+    min-height: 30px;
+    cursor: pointer;
+    font: verdana;
+    font-size: .9em;
+    font-weight: bolder;
+}
+.cButton:active{
+    background-color: black;
+    color: white;
+}
+#myTitle{
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#startButton {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    display: none;
+  }
+@media (max-width: 600px){
+    .controls{
+        display: flex;
+    }
+    body{
+        overflow: hidden;
+    }
+    #startButton{
+        display:inline;
+    }
+    #myTitle{
+        display:none;
+    }
+}
